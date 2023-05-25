@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Palindromo</title>
+  </head>
+  <body>
+    <label for="texto">Escribe algo:</label>
+    <input type="text" id="texto" />
+    <button id="btn">Validar</button>
+    <p id="resultado"></p>
+    <script>
+      const input = document.getElementById("texto");
+      const resultado = document.getElementById("resultado");
+      const button = document.getElementById("btn");
+
+      btn.addEventListener("click", function () {
+        const texto = input.value.toUpperCase();
+        const esPalindromo = texto.split("").reverse().join("");
+        resultado.textContent =
+          texto === esPalindromo ? "Es Palindromo" : "No Es Palindromo";
+      });
+    </script>
+  </body>
+</html>
